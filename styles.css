@@ -1,0 +1,90 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Apply a smooth transition effect for elements that change */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    background: linear-gradient(135deg, #f8fafc, #dfe9f3);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.5s ease-in-out;
+}
+
+/* Container for the time widget */
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect to make it more interactive */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styling */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Time display */
+#time {
+    font-size: 3rem;
+    font-weight: 500;
+    color: #007bff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease-in-out;
+}
+
+/* Time element gets bolder and more vibrant on hover */
+.container:hover #time {
+    color: #0056b3;
+}
+
+/* Make sure the layout is responsive on mobile devices */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    #time {
+        font-size: 2.5rem;
+    }
+}
+
+/* Subtle animation for when the time changes */
+#time {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+
+
+
+
+
+
